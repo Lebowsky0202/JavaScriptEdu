@@ -3,12 +3,6 @@
 let money = prompt("Ваш бюджет на месяц?", "");
 let time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
-let itemExpenses = prompt("Введите обязательную статью расходов в этом месяце", "");
-let total = prompt("Во сколько обойдется?", "");
-itemExpenses = prompt("Введите обязательную статью расходов в этом месяце", "");
-total = prompt("Во сколько обойдется?", "");
-
-
 const appData = {
     buget: money,
     timeData: time,
@@ -20,5 +14,14 @@ const appData = {
     savings: false,
 };
 
-alert(`Ваш бюджет на день ${money / 30}`);
 
+for(let i = 0; i < 2; i++){
+    let a = prompt("Введите обязательную статью расходов: ", ""),
+        b = prompt("Во сколько это обойдется");
+
+    appData.expenses[a] = b;
+}
+
+alert(appData.buget / 30);
+
+//Задание 3 курс Ивана Петриченко
