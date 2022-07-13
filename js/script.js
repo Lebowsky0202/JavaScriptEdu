@@ -1,34 +1,36 @@
 'use strict';
 
 
-// Циклы: вывод четных чисел
+// Конструкция switch
 
-for (let i = 2; i <= 10; i++){
-    if (i % 2) continue;
-    alert(i); 
-}
 
-// Переписать цикл for ниже на while
-for (let i = 0; i < 3; i++) {
-    alert( `number ${i}!` );
-}
+// Пример 1
+// let browser = prompt("Выбери браузер", "");
 
-let i = 0;
+// if (browser === 'Edge'){
+//     alert( "You've got the Edge!" );
+// }else if(browser === 'Chrome' 
+//     || browser === 'Firefox' 
+//     || browser === 'Safari' 
+//     || browser === 'Opera'){
+//     alert( 'Okay we support these browsers too' );
+// }else{
+//     alert( 'We hope that this page looks ok!' );
+// }
 
-while(i < 3){
-    alert( `number ${i}!` );
-    i++;
-}
+//Пример 2
 
-//Повторять цикл пока ввод неверен
+const number = +prompt('Введите число между 0 и 3', '');
 
-while(true){
-    let number = prompt("ввести число, большее 100", "");
-
-    if (number > 100 || number == null){
-        alert("Хорошо");
+switch(number){
+    case 0:
+        alert('Вы ввели число 0');
         break;
-    }
-
-    alert("Неверно, попробуй еще разок");
+    case 1:
+        alert('Вы ввели число 1');
+        break;
+    case 2:
+    case 3:
+        alert('Вы ввели число 2, а может и 3');
+        break;
 }
